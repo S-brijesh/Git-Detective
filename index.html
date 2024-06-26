@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="stylesheet" href="style.css">
+    <title>DevDetective</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <!------------------------------------------------ Heading ------------------------------------------------>
+            <h1 class="title">Git-Detective</h1>
+            <div id="btn-mode">
+                <p id="mode-text">DARK</p>
+                <div class="icon-container">
+                    <img id="mode-icon" src="./assets/images/moon-icon.svg" alt="">
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div id="app">
+
+                <div class="searchbar-container active">
+                    <input type="search" name="user-input" id="input" placeholder="Enter a Github username..." required>
+
+                    <!----------------------------------- Error Wla (no result) ------------------------------------>
+                    <div class="error">
+                        <p id="no-results">no search results</p>
+                    </div>
+
+                    <!--------------------------------------- Search Button ---------------------------------------->
+                    <div class="btn-search" id="submit">Search</div>
+                </div>
+
+                <div class="profile-container">
+                    <div class="profile-content">
+                        <!------------------------- Header mai User ka(Image, name , date, githublink) -------------->
+                        <div class="profile-header">
+                            <!----------------------------- Image User ka fetch wala --------------------------------->
+                            <img src="#" id="avatar" alt="">
+                            <div class="profile-info-wrapper">
+                                <div class="profile-name">
+                                    <!------------------------ User Name Dynamic wala --------------------------------->
+                                    <h2 id="name"></h2>
+                                    <a href="#" target="_blank" rel="noopener noreferrer" id="user"></a>
+                                </div>
+                                <!---------------------------- Created Account Wala Date ------------------------------>
+                                <p id="date"></p>
+                            </div>
+                        </div>
+
+                        <!----------------------------------- Users Bio ---------------------------------------------->
+                        <p id="bio"></p>
+
+                        <!---------------------- (Repository, Follower, Following) ------------------------------------>
+                        <div class="profile-stats-wrapper">
+                            <div class="profile-stat">
+                                <!------------------------- Repository wala Dynamic hai ------------------------------>
+                                <p class="stat-title">Repos</p>
+                                <p class="stat-value" id="repos"></p>
+                            </div> 
+                            <div class="profile-stat">
+                                <!------------------------- Followers wala Dynamic hai -------------------------------->
+                                <p class="stat-title">Followers</p>
+                                <p id="followers" class="stat-value"></p>
+                            </div>
+                            <div class="profile-stat">
+                                <!--------------------------- Following wala Dynamic hai ------------------------------>
+                                <p class="stat-title">Following</p>
+                                <p id="following" class="stat-value"></p>
+                            </div>
+                        </div>
+                        <div class="profile-bottom-wrapper">
+                            <div class="profile-info">
+                                <div class="bottom-icon">
+                                    <img src="./assets/images/location-icon.svg" alt="">
+                                </div>
+                                <p id="location"></p>
+                            </div>
+                            <div class="profile-info">
+                                <div class="bottom-info">
+                                    <img src="./assets/images/website-icon.svg" alt="">
+                                </div>
+                                <a href="#" id="page"></a>
+                            </div>
+                            <div class="profile-info">
+                                <div class="bottom-info">
+                                    <img src="./assets/images/twitter-icon.svg" alt="">
+                                </div>
+                                <a href="#" id="twitter"></a>
+                            </div>
+                            <div class="profile-info">
+                                <div class="bottom-icon">
+                                    <img src="./assets/images/company-icon.svg" alt="">
+                                </div>
+                                <p id="company"></p>
+                            </div>     
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
